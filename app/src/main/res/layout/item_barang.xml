@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/cvItem"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tvNamaBarang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/ivBarang"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+
+            android:layout_below="@id/tvNamaBarang"
+            android:layout_above="@id/tvPrice"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"/>
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textAlignment="textEnd"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
