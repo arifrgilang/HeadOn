@@ -13,9 +13,9 @@
         <!--        <item>Battle Space Helmet</item>-->
     </string-array>
     <string-array name="object_img_url">
-        <item>https://doc-0g-2s-docs.googleusercontent.com/docs/securesc/uoj0f57jgre75n4rak87vf3r6uh4ssnv/lq3jlei3jom4dj4j7qcdba8pj4ib6qv3/1589422800000/17385962349654309348/17385962349654309348/11dQZkm8co-yDC5CjTr1Pzb2X1-EjBacJ</item>
-        <item>https://doc-10-2s-docs.googleusercontent.com/docs/securesc/uoj0f57jgre75n4rak87vf3r6uh4ssnv/hhmot61l4jceddgepiofpkqjcui3a1us/1589422800000/17385962349654309348/17385962349654309348/1nVYJXLq0JKpArIe02uglf143RzV5Fp1r</item>
-        <item>https://doc-0s-2s-docs.googleusercontent.com/docs/securesc/uoj0f57jgre75n4rak87vf3r6uh4ssnv/1ifdcaheo662km8r0m7tk0nipisi6plb/1589422725000/17385962349654309348/17385962349654309348/1zxtoZRXpPdiMwy_uV5lxS-geLEwTmzz8</item>
+        <item>https://apps.himatif.org/img/geisha_transp.png</item>
+        <item>https://apps.himatif.org/img/transp_glasses.png</item>
+        <item>https://apps.himatif.org/img/avior_transp.png</item>
         <!--        <item>https://ecs7.tokopedia.net/img/cache/700/product-1/2019/12/28/19632696/19632696_d69f3438-e674-4d44-ba4f-dadf7f438674_800_800</item>-->
     </string-array>
     <string-array name="object_price">
