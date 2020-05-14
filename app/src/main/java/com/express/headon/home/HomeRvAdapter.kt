@@ -35,14 +35,12 @@ class HomeRvAdapter(
                 .into(itemView.ivBarang)
 
             itemView.cvItem.setOnClickListener {
-                headObject.path?.let{
-                    callback.onClick(it)
-                }
+                callback.onClick(position)
             }
         }
     }
 
     interface OnBarangClickListener{
-        fun onClick(objectPath: String)
+        fun onClick(position: Int)
     }
 }
