@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.express.headon.CustomRvItemDecor
 import com.express.headon.R
 import com.express.headon.home.HomeRvAdapter
 import com.express.headon.model.HeadObject
@@ -24,10 +25,10 @@ import kotlinx.android.synthetic.main.activity_face_ar.*
 class FaceArActivity : AppCompatActivity() {
     private lateinit var rvAdapter: FaceArRvAdapter
     private val list = mutableListOf<HeadObject>()
-    private val arrPath = resources.getStringArray(R.array.object_path)
-    private val arrName = resources.getStringArray(R.array.object_name)
-    private val arrImgUrl = resources.getStringArray(R.array.object_img_url)
-    private val arrPrice = resources.getStringArray(R.array.object_price)
+    private lateinit var arrPath: Array<String>
+    private lateinit var arrName: Array<String>
+    private lateinit var arrImgUrl: Array<String>
+    private lateinit var arrPrice: Array<String>
 
     private val MIN_OPENGL_VERSION = 3.0
     private lateinit var arFragment: FaceArFragment
@@ -103,6 +104,7 @@ class FaceArActivity : AppCompatActivity() {
                 false
             )
             adapter = rvAdapter
+            addItemDecoration(CustomRvItemDecor(16, "left"))
         }
     }
 
@@ -155,7 +157,7 @@ class FaceArActivity : AppCompatActivity() {
             ?.deviceConfigurationInfo
             ?.glEsVersion
 
-        openGlVersionString?.let { s ->
+        openGlVersionString?.let { _ ->
             if (java.lang.Double.parseDouble(openGlVersionString) < MIN_OPENGL_VERSION) {
                 Toast.makeText(this, "Sceneform requires OpenGL ES 3.0 or later", Toast.LENGTH_LONG)
                     .show()
@@ -167,6 +169,10 @@ class FaceArActivity : AppCompatActivity() {
     }
 
     private fun generateList() {
+        arrPath = resources.getStringArray(R.array.object_path)
+        arrName = resources.getStringArray(R.array.object_name)
+        arrImgUrl = resources.getStringArray(R.array.object_img_url)
+        arrPrice = resources.getStringArray(R.array.object_price)
         for(x in arrName.indices){
             list.add(
                 HeadObject(

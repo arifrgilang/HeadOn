@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.express.headon.CustomRvItemDecor
 import com.express.headon.R
 import com.express.headon.ar.FaceArActivity
 import com.express.headon.model.HeadObject
@@ -13,10 +14,10 @@ import kotlinx.android.synthetic.main.activity_home.*
 class HomeActivity : AppCompatActivity() {
     private lateinit var rvAdapter: HomeRvAdapter
     private val list = mutableListOf<HeadObject>()
-    private val arrPath = resources.getStringArray(R.array.object_path)
-    private val arrName = resources.getStringArray(R.array.object_name)
-    private val arrImgUrl = resources.getStringArray(R.array.object_img_url)
-    private val arrPrice = resources.getStringArray(R.array.object_price)
+    private lateinit var arrPath: Array<String>
+    private lateinit var arrName: Array<String>
+    private lateinit var arrImgUrl: Array<String>
+    private lateinit var arrPrice: Array<String>
     private val OBJECT_RETURN_ID = 2004
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,6 +28,10 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun generateList() {
+        arrPath = resources.getStringArray(R.array.object_path)
+        arrName = resources.getStringArray(R.array.object_name)
+        arrImgUrl = resources.getStringArray(R.array.object_img_url)
+        arrPrice = resources.getStringArray(R.array.object_price)
         for(x in arrName.indices){
             list.add(
                 HeadObject(
@@ -53,6 +58,7 @@ class HomeActivity : AppCompatActivity() {
         with(rvBarang){
             layoutManager = LinearLayoutManager(this@HomeActivity)
             adapter = rvAdapter
+            addItemDecoration(CustomRvItemDecor(16, "top"))
         }
     }
 
