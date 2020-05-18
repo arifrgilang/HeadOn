@@ -7,6 +7,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.express.headon.CustomRvItemDecor
@@ -16,6 +17,7 @@ import com.express.headon.model.HeadObject
 import com.google.ar.core.ArCoreApk
 import com.google.ar.core.AugmentedFace
 import com.google.ar.core.TrackingState
+import com.google.ar.sceneform.assets.RenderableSource
 import com.google.ar.sceneform.rendering.ModelRenderable
 import com.google.ar.sceneform.rendering.Renderable
 import com.google.ar.sceneform.rendering.Texture
@@ -136,14 +138,30 @@ class FaceArActivity : AppCompatActivity() {
             .thenAccept { texture -> faceMeshTexture = texture }
     }
 
-    private fun setRenderable(fileName: String){
+    private fun setRenderable(srcGltf: String){
         ModelRenderable.builder()
-            .setSource(this, Uri.parse(fileName))
+            .setSource(this, RenderableSource.builder().setSource(
+                this,
+                Uri.parse(srcGltf),
+                RenderableSource.SourceType.GLTF2)
+                .setScale(0.5f)
+                .setRecenterMode(RenderableSource.RecenterMode.ROOT)
+                .build()
+            )
+            .setRegistryId(srcGltf)
             .build()
             .thenAccept { modelRenderable ->
                 regionsRenderable = modelRenderable
 //                modelRenderable.isShadowCaster = false
 //                modelRenderable.isShadowReceiver = false
+            }
+            .exceptionally { throwable ->
+                Toast.makeText(
+                    this,
+                    "Unable to load renderable ",
+                    Toast.LENGTH_LONG
+                ).show()
+                null
             }
     }
 
