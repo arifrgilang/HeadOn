@@ -46,10 +46,10 @@ dependencies {
 
 apply plugin: 'com.google.ar.sceneform.plugin'
 
-sceneform.asset('sampledata/roboHelmet.obj',
+sceneform.asset('sampledata/helmet.fbx',
         'default',
-        'sampledata/roboHelmet.sfa',
-        'src/main/assets/roboHelmet')
+        'sampledata/helmet.sfa',
+        'src/main/assets/helmet')
 
 sceneform.asset('sampledata/geishamask.fbx',
         'default',

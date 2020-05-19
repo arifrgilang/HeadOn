@@ -1,10 +1,12 @@
 package com.express.headon
 
+import android.content.Context
 import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
 class CustomRvItemDecor(
+    private val ctx: Context,
     private val spaceHeight: Int,
     private val type: String
 ) : RecyclerView.ItemDecoration(){
@@ -14,27 +16,32 @@ class CustomRvItemDecor(
         parent: RecyclerView,
         state: RecyclerView.State
     ) {
+        val customMargin = dpToPx(ctx, spaceHeight)
         when(type){
             "top" -> {
                 with(outRect){
                     if(parent.getChildAdapterPosition(view) == 0){
-                        top = spaceHeight
+                        top = customMargin
                     }
-                    left = spaceHeight
-                    right = spaceHeight
-                    bottom = spaceHeight
+                    left = customMargin
+                    right = customMargin
+                    bottom = customMargin
                 }
             }
             "left" -> {
                 with(outRect){
                     if(parent.getChildAdapterPosition(view) == 0){
-                        left = spaceHeight
+                        left = customMargin
                     }
-                    top = spaceHeight
-                    right = spaceHeight
-                    bottom = spaceHeight
+                    top = customMargin
+                    right = customMargin
+                    bottom = customMargin
                 }
             }
         }
+    }
+
+    private fun dpToPx(context: Context, dp: Int): Int {
+        return (dp * context.resources.displayMetrics.density).toInt()
     }
 }

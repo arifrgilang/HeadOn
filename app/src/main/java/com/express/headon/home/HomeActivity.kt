@@ -58,7 +58,7 @@ class HomeActivity : AppCompatActivity() {
         with(rvBarang){
             layoutManager = LinearLayoutManager(this@HomeActivity)
             adapter = rvAdapter
-            addItemDecoration(CustomRvItemDecor(16, "top"))
+            addItemDecoration(CustomRvItemDecor(this@HomeActivity, 16, "top"))
         }
     }
 

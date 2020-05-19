@@ -57,31 +57,33 @@ class FaceArActivity : AppCompatActivity() {
 
         val scene = sceneView.scene
         scene.addOnUpdateListener {
-            val faceList = sceneView.session!!.getAllTrackables(AugmentedFace::class.java)
-            // make new AugmentedFaceNodes for any new faces
-            for(face in faceList){
-                if(!faceNodeMap.containsKey(face)){
-                    // set the model when face is detected
-                    with(AugmentedFaceNode(face)){
-                        setParent(scene)
-                        faceRegionsRenderable = regionsRenderable
-                        createTexture()
-                        faceNodeMap[face] = this
+            if(regionsRenderable != null){
+                val faceList = sceneView.session!!.getAllTrackables(AugmentedFace::class.java)
+                // make new AugmentedFaceNodes for any new faces
+                for(face in faceList){
+                    if(!faceNodeMap.containsKey(face)){
+                        // set the model when face is detected
+                        with(AugmentedFaceNode(face)){
+                            setParent(scene)
+                            faceRegionsRenderable = regionsRenderable
+                            createTexture()
+                            faceNodeMap[face] = this
+                        }
                     }
                 }
-            }
 
-            // remove any AugmentedFaceNodes associated with an AugmentedFace that stopped tracking
-            val faceIterator = faceNodeMap.entries.iterator()
-            while (faceIterator.hasNext()) {
-                val entry = faceIterator.next()
-                val face = entry.key
-                if (face.trackingState == TrackingState.STOPPED) {
-                    with(entry.value) {
-                        setParent(null)
-                        children.clear()
+                // remove any AugmentedFaceNodes associated with an AugmentedFace that stopped tracking
+                val faceIterator = faceNodeMap.entries.iterator()
+                while (faceIterator.hasNext()) {
+                    val entry = faceIterator.next()
+                    val face = entry.key
+                    if (face.trackingState == TrackingState.STOPPED) {
+                        with(entry.value) {
+                            setParent(null)
+                            children.clear()
+                        }
+                        faceIterator.remove()
                     }
-                    faceIterator.remove()
                 }
             }
         }
@@ -104,7 +106,7 @@ class FaceArActivity : AppCompatActivity() {
                 false
             )
             adapter = rvAdapter
-            addItemDecoration(CustomRvItemDecor(16, "left"))
+            addItemDecoration(CustomRvItemDecor(this@FaceArActivity,16, "left"))
         }
     }
 
@@ -157,9 +159,9 @@ class FaceArActivity : AppCompatActivity() {
             ?.deviceConfigurationInfo
             ?.glEsVersion
 
-        openGlVersionString?.let { _ ->
+        openGlVersionString?.let { it ->
             if (java.lang.Double.parseDouble(openGlVersionString) < MIN_OPENGL_VERSION) {
-                Toast.makeText(this, "Sceneform requires OpenGL ES 3.0 or later", Toast.LENGTH_LONG)
+                Toast.makeText(this, "Your OpenGL Version is $it . Sceneform requires OpenGL ES 3.0 or later", Toast.LENGTH_LONG)
                     .show()
                 finish()
                 return false
