@@ -3,31 +3,26 @@
     <string-array name="object_path">
         <item>yellow_sunglasses.sfb</item>
         <item>sunglasses.sfb</item>
-        <item>pumpkinhead.sfb</item>
         <item>mario_hat.sfb</item>
     </string-array>
     <string-array name="object_name">
         <item>Yellow Korean Sunglasses</item>
         <item>Black Sunglasses</item>
-        <item>Pumpkin Head</item>
         <item>Mario Hat</item>
     </string-array>
     <string-array name="object_img_url">
         <item>https://apps.himatif.org/img/yellowglasses.png</item>
         <item>https://apps.himatif.org/img/transp_glasses.png</item>
-        <item>https://apps.himatif.org/img/pumpkinhead.png</item>
         <item>https://apps.himatif.org/img/mariohat.png</item>
     </string-array>
     <string-array name="object_price">
         <item>Rp 250.000</item>
         <item>Rp 200.000</item>
-        <item>Rp 130.000</item>
         <item>Rp 150.000</item>
     </string-array>
     <string-array name="object_desc">
         <item>Kacamata untuk bersantai khas orang korea berwarna kuning </item>
         <item>Kacamata hitam dan elegan. Cocok untuk digunakan dalam membaca</item>
-        <item>Pumpkin head adalah topeng di wajah untuk waktu halloween anda</item>
         <item>Topi mario berwarna merah yang cocok dipakai anak anak</item>
     </string-array>
 </resources>

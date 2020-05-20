@@ -145,8 +145,8 @@ class FaceArActivity : AppCompatActivity() {
             .build()
             .thenAccept { modelRenderable ->
                 regionsRenderable = modelRenderable
-//                modelRenderable.isShadowCaster = false
-//                modelRenderable.isShadowReceiver = false
+                modelRenderable.isShadowCaster = false
+                modelRenderable.isShadowReceiver = false
             }
     }
 

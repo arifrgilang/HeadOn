@@ -56,11 +56,6 @@ sceneform.asset('sampledata/yellow_sunglasses.fbx',
         'sampledata/yellow_sunglasses.sfa',
         'src/main/assets/yellow_sunglasses')
 
-sceneform.asset('sampledata/pumpkinhead.obj',
-        'default',
-        'sampledata/pumpkinhead.sfa',
-        'src/main/assets/pumpkinhead')
-
 sceneform.asset('sampledata/mario_hat.fbx',
         'default',
         'sampledata/mario_hat.sfa',
