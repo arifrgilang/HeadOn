@@ -1,55 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="object_path">
-        <item>geishamask.sfb</item>
+        <item>yellow_sunglasses.sfb</item>
         <item>sunglasses.sfb</item>
-        <item>aviator.sfb</item>
-        <item>helmet.sfb</item>
+        <item>pumpkinhead.sfb</item>
+        <item>mario_hat.sfb</item>
     </string-array>
     <string-array name="object_name">
-        <item>Geisha Black Mask</item>
+        <item>Yellow Korean Sunglasses</item>
         <item>Black Sunglasses</item>
-        <item>Aviator Glasses</item>
-        <item>Battle Space Helmet</item>
+        <item>Pumpkin Head</item>
+        <item>Mario Hat</item>
     </string-array>
     <string-array name="object_img_url">
-        <item>https://apps.himatif.org/img/geisha_transp.png</item>
+        <item>https://apps.himatif.org/img/yellowglasses.png</item>
         <item>https://apps.himatif.org/img/transp_glasses.png</item>
-        <item>https://apps.himatif.org/img/avior_transp.png</item>
-        <item>https://apps.himatif.org/img/transp_helmet.png</item>
+        <item>https://apps.himatif.org/img/pumpkinhead.png</item>
+        <item>https://apps.himatif.org/img/mariohat.png</item>
     </string-array>
     <string-array name="object_price">
-        <item>Rp 70.000</item>
+        <item>Rp 250.000</item>
         <item>Rp 200.000</item>
-        <item>Rp 550.000</item>
-        <item>Rp 200.000</item>
-    </string-array>
-
-<!--  DEBUG  -->
-    <string-array name="nama_barang">
-        <item>Cosina Topi Rimba</item>
-        <item>Topi Baseball Superman</item>
-        <item>Topi caps NY Yankees</item>
-        <item>Frame Kacamata Korea Bulat</item>
-        <item>Frame Kacamata Korea Himat</item>
-        <item>Frame Kacamata Korea Oppa</item>
-    </string-array>
-
-    <string-array name="url_foto_barang">
-        <item>https://ecs7.tokopedia.net/img/cache/700/product-1/2019/12/28/19632696/19632696_d69f3438-e674-4d44-ba4f-dadf7f438674_800_800</item>
-        <item>https://ecs7.tokopedia.net/img/cache/700/product-1/2017/3/29/1181550/1181550_ff2b7698-1962-4898-9f79-34acbbb8724e.jpg</item>
-        <item>https://ecs7.tokopedia.net/img/cache/700/product-1/2020/4/20/210764644/210764644_0896527d-de08-4349-a0ec-07fb2f7826c0_600_600.jpg</item>
-        <item>https://ecs7.tokopedia.net/img/cache/700/product-1/2018/4/19/22878901/22878901_bd8582b9-a746-43ab-8890-6579efc9a4a8_900_900.jpg</item>
-        <item>https://ecs7.tokopedia.net/img/cache/700/product-1/2020/4/22/22878901/22878901_eaba0478-afa8-4311-88b9-409bf0b15eb8_1000_1000</item>
-        <item>https://ecs7.tokopedia.net/img/cache/700/product-1/2018/10/3/22878901/22878901_3fb21608-154e-4faa-9121-dfacf03395b0_900_900.jpg</item>
-    </string-array>
-
-    <string-array name="harga_barang">
-        <item>Rp 85.500</item>
-        <item>Rp 55.000</item>
         <item>Rp 130.000</item>
-        <item>Rp 99.000</item>
-        <item>Rp 99.000</item>
-        <item>Rp 99.000</item>
+        <item>Rp 150.000</item>
+    </string-array>
+    <string-array name="object_desc">
+        <item>Kacamata untuk bersantai khas orang korea berwarna kuning </item>
+        <item>Kacamata hitam dan elegan. Cocok untuk digunakan dalam membaca</item>
+        <item>Pumpkin head adalah topeng di wajah untuk waktu halloween anda</item>
+        <item>Topi mario berwarna merah yang cocok dipakai anak anak</item>
     </string-array>
 </resources>

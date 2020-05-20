@@ -29,6 +29,7 @@ class FaceArActivity : AppCompatActivity() {
     private lateinit var arrName: Array<String>
     private lateinit var arrImgUrl: Array<String>
     private lateinit var arrPrice: Array<String>
+    private lateinit var arrDesc: Array<String>
 
     private val MIN_OPENGL_VERSION = 3.0
     private lateinit var arFragment: FaceArFragment
@@ -175,12 +176,13 @@ class FaceArActivity : AppCompatActivity() {
         arrName = resources.getStringArray(R.array.object_name)
         arrImgUrl = resources.getStringArray(R.array.object_img_url)
         arrPrice = resources.getStringArray(R.array.object_price)
+        arrDesc = resources.getStringArray(R.array.object_desc)
         for(x in arrName.indices){
             list.add(
                 HeadObject(
                     arrPath[x],
                     arrName[x],
-                    "", // currently empty for debugging
+                    arrDesc[x],
                     arrImgUrl[x],
                     arrPrice[x]
                 )
