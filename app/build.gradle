@@ -46,23 +46,17 @@ dependencies {
 
 apply plugin: 'com.google.ar.sceneform.plugin'
 
-sceneform.asset('sampledata/roboHelmet.obj',
-        'default',
-        'sampledata/roboHelmet.sfa',
-        'src/main/assets/roboHelmet')
-
-sceneform.asset('sampledata/geishamask.fbx',
-        'default',
-        'sampledata/geishamask.sfa',
-        'src/main/assets/geishamask')
-
-sceneform.asset('sampledata/aviator.fbx',
-        'default',
-        'sampledata/aviator.sfa',
-        'src/main/assets/aviator')
-
 sceneform.asset('sampledata/sunglasses.fbx',
         'default',
         'sampledata/sunglasses.sfa',
         'src/main/assets/sunglasses')
 
+sceneform.asset('sampledata/yellow_sunglasses.fbx',
+        'default',
+        'sampledata/yellow_sunglasses.sfa',
+        'src/main/assets/yellow_sunglasses')
+
+sceneform.asset('sampledata/mario_hat.fbx',
+        'default',
+        'sampledata/mario_hat.sfa',
+        'src/main/assets/mario_hat')
